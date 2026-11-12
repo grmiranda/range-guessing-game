@@ -1,0 +1,13 @@
+@use '../../../styles/tokens' as *;
+
+.how-to-play {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+  padding-left: $space-md;
+}
+
+.how-to-play__rule {
+  color: $color-text;
+  font-size: $font-size-sm;
+}

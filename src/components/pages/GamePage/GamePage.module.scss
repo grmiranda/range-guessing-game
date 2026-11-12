@@ -1,0 +1,51 @@
+@use '../../../styles/tokens' as *;
+
+.game-page__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-xs $space-md;
+}
+
+.game-page__round {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: $space-sm;
+}
+
+.game-page__badge {
+  padding: 0 $space-sm;
+  border-radius: $radius-sm;
+  background-color: $color-danger;
+  color: $color-text;
+  font-size: $font-size-sm;
+  font-weight: 700;
+}
+
+.game-page__scoreboard {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.game-page__actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: $space-xs;
+}
+
+.game-page__board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-xs;
+  width: 100%;
+  max-width: calc(45dvh * 200 / 110);
+  margin: 0 auto;
+}
+
+.game-page__instruction {
+  color: $color-text;
+  font-size: $font-size-md;
+  text-align: center;
+}

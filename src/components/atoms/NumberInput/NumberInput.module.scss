@@ -1,0 +1,22 @@
+@use '../../../styles/tokens' as *;
+
+.number-input {
+  width: 100%;
+  min-height: $touch-target-min;
+  padding: $space-xs $space-sm;
+  border: 1px solid $color-border;
+  border-radius: $radius-sm;
+  background-color: $color-surface;
+  color: $color-text;
+  font: inherit;
+  font-size: $font-size-md;
+
+  &:focus-visible {
+    outline: 2px solid $color-primary;
+    outline-offset: 1px;
+  }
+}
+
+.number-input--invalid {
+  border-color: $color-danger;
+}

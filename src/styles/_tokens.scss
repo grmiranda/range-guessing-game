@@ -1,0 +1,31 @@
+$color-background: #121212;
+$color-surface: #1e1e24;
+$color-surface-raised: #2a2a33;
+$color-border: #3a3a45;
+$color-text: #f5f5f5;
+$color-text-muted: #a4a4b0;
+$color-primary: #4a6cf7;
+$color-primary-strong: #3651d4;
+$color-secondary: #5352ed;
+$color-danger: #ff4757;
+$color-success: #2ed573;
+
+$color-zone-two: #ff6b6b;
+$color-zone-four: #feca57;
+$color-zone-six: #48dbfb;
+$color-needle: #ff4757;
+
+$space-xs: clamp(0.25rem, 1vh, 0.5rem);
+$space-sm: clamp(0.5rem, 2vh, 0.75rem);
+$space-md: clamp(0.75rem, 3vh, 1.25rem);
+$space-lg: clamp(1rem, 5vh, 2rem);
+
+$font-size-sm: clamp(0.75rem, 3vh, 0.95rem);
+$font-size-md: clamp(0.9rem, 4vh, 1.15rem);
+$font-size-lg: clamp(1.1rem, 6vh, 1.75rem);
+$font-size-xl: clamp(1.5rem, 9vh, 3rem);
+
+$radius-sm: 8px;
+$radius-md: 12px;
+
+$touch-target-min: 44px;

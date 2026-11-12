@@ -1,0 +1,44 @@
+@use '../../../styles/tokens' as *;
+
+.dial {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 55dvh;
+}
+
+.dial__background {
+  fill: $color-surface-raised;
+  stroke: $color-border;
+  stroke-width: 1;
+}
+
+.dial__zone--two {
+  fill: $color-zone-two;
+}
+
+.dial__zone--four {
+  fill: $color-zone-four;
+}
+
+.dial__zone--six {
+  fill: $color-zone-six;
+}
+
+.dial__zone-label {
+  fill: $color-background;
+  font-size: 7px;
+  font-weight: 700;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.dial__needle {
+  stroke: $color-needle;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.dial__pivot {
+  fill: $color-needle;
+}

@@ -1,0 +1,16 @@
+@use '../../../styles/tokens' as *;
+
+.handoff-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-md;
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.handoff-panel__description {
+  color: $color-text-muted;
+  font-size: $font-size-md;
+}

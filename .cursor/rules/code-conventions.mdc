@@ -1,0 +1,40 @@
+---
+description: Convenções de código do Sintonia (Atomic Design, BEM, nomes, testes)
+alwaysApply: true
+---
+
+# Convenções de código
+
+## Atomic Design
+
+Componentes ficam em `src/components/<nível>/<Nome>/`, com `<Nome>.tsx`, `<Nome>.module.scss` e `<Nome>.test.tsx`.
+
+- `atoms/`: elementos básicos (Button, TextInput, Heading).
+- `molecules/`: combinações simples de átomos (FormField, PlayerScore).
+- `organisms/`: blocos completos da interface (Dial, SetupForm, Modal).
+- `templates/`: layout das telas (ScreenTemplate).
+- `pages/`: telas ligadas ao estado do jogo (HomePage, GamePage, VictoryPage).
+
+Os nomes de componente usam PascalCase, com um componente por arquivo e `export default`. A interface de props fica local, sem `export`, para o oxlint (`react/only-export-components`) continuar sem avisos.
+
+## BEM com CSS Modules
+
+Cada `.module.scss` tem um único bloco, com o nome do componente em kebab-case. Use os tokens de `src/styles/_tokens.scss`.
+
+```scss
+@use '../../../styles/tokens' as *;
+
+.player-score { }
+.player-score__name { }
+.player-score--highlight { }
+```
+
+```tsx
+className={classNames(styles['player-score'], highlight && styles['player-score--highlight'])}
+```
+
+## Testes
+
+- Vitest com Testing Library, com imports explícitos de `vitest`. O teste fica ao lado do arquivo testado.
+- A cobertura mínima global é de 80%, verificada com `npm run test:coverage`.
+- O que é aleatório chega por parâmetro (`random: RandomFn`), para os testes serem determinísticos.

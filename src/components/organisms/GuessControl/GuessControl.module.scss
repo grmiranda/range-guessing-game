@@ -1,0 +1,82 @@
+@use '../../../styles/tokens' as *;
+
+$track-height: 8px;
+$thumb-size: $touch-target-min;
+
+.guess-control {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  width: 100%;
+  color: $color-text;
+  font-size: $font-size-sm;
+  font-weight: 600;
+}
+
+.guess-control__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.guess-control__end {
+  flex: 0 1 auto;
+  max-width: 25%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.guess-control__input {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: $touch-target-min;
+  margin: 0;
+  background: transparent;
+  appearance: none;
+  cursor: pointer;
+  touch-action: none;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+
+  &::-webkit-slider-runnable-track {
+    height: $track-height;
+    border-radius: $track-height;
+    background-color: $color-border;
+  }
+
+  &::-webkit-slider-thumb {
+    width: $thumb-size;
+    height: $thumb-size;
+    margin-top: calc(($track-height - $thumb-size) / 2);
+    border: 2px solid $color-text;
+    border-radius: 50%;
+    background-color: $color-needle;
+    appearance: none;
+  }
+
+  &::-moz-range-track {
+    height: $track-height;
+    border-radius: $track-height;
+    background-color: $color-border;
+  }
+
+  &::-moz-range-thumb {
+    width: $thumb-size;
+    height: $thumb-size;
+    border: 2px solid $color-text;
+    border-radius: 50%;
+    background-color: $color-needle;
+  }
+}

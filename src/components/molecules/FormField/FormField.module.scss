@@ -1,0 +1,20 @@
+@use '../../../styles/tokens' as *;
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+  width: 100%;
+}
+
+.form-field__label {
+  color: $color-text;
+  font-size: $font-size-sm;
+  font-weight: 600;
+}
+
+.form-field__error {
+  margin: 0;
+  color: $color-danger;
+  font-size: $font-size-sm;
+}

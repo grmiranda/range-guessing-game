@@ -1,0 +1,46 @@
+@use '../../../styles/tokens' as *;
+
+.screen-template {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+  width: 100%;
+  height: 100%;
+  padding: $space-sm $space-md;
+  overflow: hidden;
+}
+
+.screen-template__header,
+.screen-template__footer {
+  flex: 0 0 auto;
+}
+
+.screen-template__body {
+  display: grid;
+  flex: 1 1 auto;
+  grid-template-columns: minmax(0, 1fr);
+  gap: $space-md;
+  min-height: 0;
+}
+
+.screen-template--with-aside .screen-template__body {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 38%);
+}
+
+.screen-template__main,
+.screen-template__aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: $space-sm;
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+}
+
+.screen-template__aside {
+  padding: $space-sm;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background-color: $color-surface;
+}

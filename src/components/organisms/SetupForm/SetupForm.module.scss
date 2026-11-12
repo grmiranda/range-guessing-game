@@ -1,0 +1,12 @@
+@use '../../../styles/tokens' as *;
+
+.setup-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  gap: $space-sm $space-md;
+  width: 100%;
+}
+
+.setup-form__actions {
+  grid-column: 1 / -1;
+}

@@ -1,0 +1,19 @@
+@use '../../../styles/tokens' as *;
+
+.confirm-dialog {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
+
+.confirm-dialog__message {
+  color: $color-text;
+  font-size: $font-size-md;
+}
+
+.confirm-dialog__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: $space-sm;
+}

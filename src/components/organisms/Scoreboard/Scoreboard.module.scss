@@ -1,0 +1,23 @@
+@use '../../../styles/tokens' as *;
+
+.scoreboard {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-sm;
+  width: 100%;
+}
+
+.scoreboard__players {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-sm;
+  min-width: 0;
+}
+
+.scoreboard__goal {
+  color: $color-text-muted;
+  font-size: $font-size-sm;
+  font-weight: 600;
+}

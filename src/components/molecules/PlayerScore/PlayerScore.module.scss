@@ -1,0 +1,38 @@
+@use '../../../styles/tokens' as *;
+
+.player-score {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  padding: $space-xs $space-sm;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  background-color: $color-surface;
+  color: $color-text;
+}
+
+.player-score--highlight {
+  border-color: $color-primary;
+  background-color: $color-surface-raised;
+}
+
+.player-score__name {
+  font-size: $font-size-md;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.player-score__score {
+  font-size: $font-size-lg;
+  font-weight: 700;
+}
+
+.player-score__badge {
+  padding: 0 $space-xs;
+  border-radius: $radius-sm;
+  background-color: $color-secondary;
+  font-size: $font-size-sm;
+  font-weight: 600;
+}

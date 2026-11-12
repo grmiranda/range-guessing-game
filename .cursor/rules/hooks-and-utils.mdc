@@ -1,0 +1,35 @@
+---
+description: Nomes e pastas de hooks React e de funções utilitárias
+globs: src/hooks/**,src/**/utils/**
+alwaysApply: false
+---
+
+# Hooks e utils
+
+## Hooks
+
+Um arquivo que usa recursos do React (`useState`, `useReducer`, `useContext`, `useEffect`, `useMemo`, `useCallback`) e funciona como hook:
+
+- fica em `src/hooks/`;
+- tem o nome do arquivo e da função começando por `use`, como `useGameActions.ts`;
+- tem teste ao lado, como `useGameActions.test.tsx`, usando `renderHook`.
+
+## Utils
+
+Um arquivo `.ts` com lógica reutilizável que **não** usa estado nem recursos do React:
+
+- fica em uma pasta `utils/`, como `src/utils/game/` ou `src/utils/dial/`;
+- **não** leva o prefixo `use`;
+- é composto de funções puras, sem mutar a entrada.
+
+```ts
+// ❌ src/hooks/useScore.ts sem nenhum hook do React
+export function useScore(target: number, guess: number) { ... }
+
+// ✅ src/utils/game/scoring.ts
+export function getGuessPoints(target: number, guess: number): GuessPoints { ... }
+```
+
+## Tipos e constantes
+
+Tipos ficam em `src/types/` e constantes em `src/constants/`.

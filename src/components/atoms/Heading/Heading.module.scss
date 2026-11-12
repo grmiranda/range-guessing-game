@@ -1,0 +1,28 @@
+@use '../../../styles/tokens' as *;
+
+.heading {
+  margin: 0;
+  color: $color-text;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.heading--level-1 {
+  font-size: $font-size-xl;
+}
+
+.heading--level-2 {
+  font-size: $font-size-lg;
+}
+
+.heading--level-3 {
+  font-size: $font-size-md;
+}
+
+.heading--align-left {
+  text-align: left;
+}
+
+.heading--align-center {
+  text-align: center;
+}

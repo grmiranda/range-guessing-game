@@ -1,0 +1,28 @@
+@use '../../../styles/tokens' as *;
+
+.reveal-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-sm;
+  text-align: center;
+}
+
+.reveal-panel__results {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+  list-style: none;
+}
+
+.reveal-panel__result {
+  color: $color-text;
+  font-size: $font-size-md;
+  font-weight: 600;
+}
+
+.reveal-panel__miss {
+  color: $color-danger;
+  font-size: $font-size-md;
+  font-weight: 600;
+}

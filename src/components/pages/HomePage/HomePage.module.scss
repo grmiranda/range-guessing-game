@@ -1,0 +1,27 @@
+@use '../../../styles/tokens' as *;
+
+.home-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-md;
+}
+
+.home-page__title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 $space-md;
+  min-width: 0;
+}
+
+.home-page__subtitle {
+  color: $color-text-muted;
+  font-size: $font-size-md;
+}
+
+.home-page__content {
+  width: 100%;
+  max-width: 48rem;
+  margin: 0 auto;
+}
